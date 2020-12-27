@@ -52,13 +52,21 @@
                             } return false;
                         } 
 
-                        if (fieldsAreSet('group_footer_about_options')):
+                        if (fieldsAreSet('group_business_information')):
                         ?>
                         <div class="col-lg">
-                            <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                            <h4 class="text-uppercase mb-4"><?php the_field('footer_about_title'); ?></h4>
                             <p class="lead mb-0">
-                                Freelance is a free to use, MIT licensed Bootstrap theme created by
-                                <a href="http://startbootstrap.com">Start Bootstrap</a>
+                                <?php the_field('footer_about_description') ?>
+                                <?php 
+                                $about_link = get_field('action_button_url');
+                                if( $about_link ): 
+                                    $about_link_url = $about_link['url'];
+                                    $about_link_title = $about_link['title'];
+                                    $about_link_target = $about_link['target'] ? $about_link['target'] : '_self';
+                                ?>
+                                <?php endif; ?>
+                                <a href="<?php esc_url($about_link_url); ?>" target="<?php esc_url($about_link_target)?>"><?php esc_html($about_link_title); ?></a>
                                 .
                             </p>
                         </div>
