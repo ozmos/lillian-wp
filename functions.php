@@ -54,7 +54,7 @@ acf_add_local_field_group(array(
 			'instructions' => 'upload profile picture or avatar svg',
 			'required' => 0,
 			'conditional_logic' => 0,
-			'return_format' => 'url',
+			'return_format' => 'array',
 			'preview_size' => 'medium',
 			'library' => 'all',
 			
