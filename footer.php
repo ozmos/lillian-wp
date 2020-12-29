@@ -36,7 +36,7 @@
                                     continue;
                                 }
                             ?>
-                            <a class="btn btn-outline-light btn-social mx-1" href="https://<?php get_field($platform)?>"><i class="fab fa-fw fa-<?= esc_html( $platform )?>-f"></i></a>
+                            <a class="btn btn-outline-light btn-social mx-1" href="https://<?php the_field($platform)?>"><i class="fab fa-fw fa-<?= esc_html( $platform )?>-f"></i></a>
                             <?php
                             }; 
                             ?>
