@@ -184,7 +184,13 @@ acf_add_local_field_group(array(
 			'library' => 'all',
 		),	
 		
-		
+		// Portfolio tagline (after items to support loop indexes)
+		array(
+			'key' => 'field_portfolio_tagline',
+			'label' => 'Portfolio tagline',
+			'name' => 'portfolio_tagline',
+			'type' => 'text'
+		),
 	),
 	'location' => array(
 		array(
