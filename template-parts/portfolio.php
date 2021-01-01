@@ -31,7 +31,7 @@
         $itemDescription = 'description_' . $key; 
         $itemPricing = 'pricing_' . $key;
         
-        if ($itemTitle == '') continue;
+        if (!get_field($itemTitle)) continue;
         ?>
             <!-- portfolio item <?= $key ?>-->
             <div class="col-md-6 col-lg-4 mb-5">

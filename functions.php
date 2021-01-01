@@ -242,6 +242,36 @@ acf_add_local_field_group(array(
 			'name' => 'pricing_4',
 			'type' => 'text',
 		),
+		// Item 5
+		array(
+			'key' => 'field_title_5',
+			'label' => 'Title 5',
+			'name' => 'title_5',
+			'type' => 'text',
+			
+		),
+		array(
+			'key' => 'field_description_5',
+			'label' => 'Description 5',
+			'name' => 'description_5',
+			'type' => 'textarea',
+		
+		),
+		array(
+			'key' => 'field_image_5',
+			'label' => 'Image 5',
+			'name' => 'image_5',
+			'type' => 'image',
+			'return_format'=>'url',
+			'preview_size' => 'medium',
+			'library' => 'all',
+		),	
+		array(
+			'key' => 'field_pricing_5',
+			'label' => 'Pricing 5',
+			'name' => 'pricing_5',
+			'type' => 'text',
+		),
 	),
 	'location' => array(
 		array(
