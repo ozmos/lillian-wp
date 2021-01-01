@@ -1,6 +1,18 @@
 <?php
 ##========================================================================================
 ##                                                                                      ##
+##                                         TODO                                         ##
+##                                                                                      ##
+##========================================================================================
+// Add automatic git deployment https://medium.com/@ridbay/how-to-deploy-your-github-repositories-to-cpanel-the-easier-way-16ec6e6cc7ee
+// Remove dead code
+// Separate portfolio items from title and description
+// Add copyright to footer DONE 1/1/2020
+// Change location of pricing info DONE 1/1/2020
+
+
+##========================================================================================
+##                                                                                      ##
 ##                                 INHERIT PARENT STYLES                                ##
 ##                                                                                      ##
 ##========================================================================================
@@ -117,7 +129,6 @@ acf_add_local_field_group(array(
 			'label' => 'Title 1',
 			'name' => 'title_1',
 			'type' => 'text',
-			
 		),
 		array(
 			'key' => 'field_description_1',
@@ -134,6 +145,12 @@ acf_add_local_field_group(array(
 			'return_format' => 'url',
 			'preview_size' => 'medium',
 			'library' => 'all',
+		),
+		array(
+			'key' => 'field_pricing_1',
+			'label' => 'Pricing 1',
+			'name' => 'pricing_1',
+			'type' => 'text',
 		),
 		// Item 2
 		array(
@@ -159,6 +176,12 @@ acf_add_local_field_group(array(
 			'preview_size' => 'medium',
 			'library' => 'all',
 		),
+		array(
+			'key' => 'field_pricing_2',
+			'label' => 'Pricing 2',
+			'name' => 'pricing_2',
+			'type' => 'text',
+		),
 		// Item 3
 		array(
 			'key' => 'field_title_3',
@@ -183,13 +206,41 @@ acf_add_local_field_group(array(
 			'preview_size' => 'medium',
 			'library' => 'all',
 		),	
-		
-		// Portfolio tagline (after items to support loop indexes)
 		array(
-			'key' => 'field_portfolio_tagline',
-			'label' => 'Portfolio tagline',
-			'name' => 'portfolio_tagline',
-			'type' => 'text'
+			'key' => 'field_pricing_3',
+			'label' => 'Pricing 3',
+			'name' => 'pricing_3',
+			'type' => 'text',
+		),
+		// Item 4
+		array(
+			'key' => 'field_title_4',
+			'label' => 'Title 4',
+			'name' => 'title_4',
+			'type' => 'text',
+			
+		),
+		array(
+			'key' => 'field_description_4',
+			'label' => 'Description 4',
+			'name' => 'description_4',
+			'type' => 'textarea',
+		
+		),
+		array(
+			'key' => 'field_image_4',
+			'label' => 'Image 4',
+			'name' => 'image_4',
+			'type' => 'image',
+			'return_format'=>'url',
+			'preview_size' => 'medium',
+			'library' => 'all',
+		),	
+		array(
+			'key' => 'field_pricing_4',
+			'label' => 'Pricing 4',
+			'name' => 'pricing_4',
+			'type' => 'text',
 		),
 	),
 	'location' => array(

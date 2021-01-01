@@ -22,20 +22,22 @@
                 }
             }
             $portfolioItems = array_filter(acf_get_fields('group_portfolio_options'), 'isPortfolioItem'); 
-            $len = (count($portfolioItems) / 3); 
+            $len = (count($portfolioItems) / 4); 
         ?>
             <?php for ($key = 1; $key <= $len; $key++):
        
         $itemTitle = 'title_' . $key; 
         $itemImage = 'image_' . $key;  
         $itemDescription = 'description_' . $key; 
+        $itemPricing = 'pricing_' . $key;
         
         if ($itemTitle == '') continue;
         ?>
             <!-- portfolio item <?= $key ?>-->
             <div class="col-md-6 col-lg-4 mb-5">
 
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal<?= $key ?>">
+                <div class="portfolio-item mx-auto border border-light" data-toggle="modal"
+                    data-target="#portfolioModal<?= $key ?>">
                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                         <div class="portfolio-item-caption-content text-center text-white"><i
                                 class="fas fa-plus fa-3x"></i></div>
@@ -43,7 +45,7 @@
 
                     <figure>
                         <img class="img-fluid" src="<?php the_field($itemImage) ?>" alt="" />
-                        <figcaption>
+                        <figcaption class="pt-3">
                             <h3 class="text-center text-secondary"><?php the_field($itemTitle); ?></h3>
                         </figcaption>
                     </figure>
@@ -74,8 +76,19 @@
                                         <!-- Portfolio Modal - Image-->
                                         <!-- <img class="img-fluid rounded mb-5" src="<?php /* the_field($itemImage) */?>" alt="" /> -->
                                         <!-- Portfolio Modal - Text-->
-                                        <p class="mb-5"><?php the_field($itemDescription) ?></p>
+                                        <?php if (get_field($itemDescription)): ?>
+                                        <p class="mb-4"><?php the_field($itemDescription) ?>
 
+                                        </p>
+                                        <?php endif; ?>
+                                        <!-- Pricing -->
+                                        <?php if ( get_field($itemPricing) ): ?>
+                                        <h3 class="lead text-center font-italic mb-4">
+                                            <?php the_field($itemPricing) ?>
+                                        </h3>
+                                        <!-- </div> -->
+                                        <!-- </div>     -->
+                                        <?php endif; ?>
                                         <button class="btn btn-primary" data-dismiss="modal">
                                             <i class="fas fa-times fa-fw"></i>
                                             Close Window
@@ -90,15 +103,5 @@
             <!-- end portfolio item <?= $key ?> -->
             <?php endfor; ?>
         </div>
-        <!-- Pricing -->
-        <?php // if (pricing): ?>
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h3 class="lead text-center font-italic">
-                    Lessons start at <strong class="">$25</strong> for a weekday class. Lessons last 45 minutes.
-                </h3>
-            </div>
-        </div>
-        <?php //endif; ?>
     </div>
 </section>
