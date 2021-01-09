@@ -10263,8 +10263,11 @@ form .row:first-child .floating-label-form-group {
 #contact form label {
   width: 100%;
 }
+
 #contact form input[type=submit] {
   padding: 1rem 1.75rem;
   font-size: 1.25rem;
 
 }
+
+/* end Form 7 styles */
