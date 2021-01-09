@@ -11,10 +11,11 @@
         </div>
         <!-- Contact Section Form-->
         <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-8 mx-auto text-center">
                 <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                <form id="contactForm" name="sentMessage" method="post"
-                    action="<?= get_stylesheet_directory_uri( )?>/inc/assets/mail/contact_me.php">
+                <?php echo do_shortcode( '[contact-form-7 id="1234" title="Contact form 1"]' ); ?>
+                <!-- <form id="contactForm" name="sentMessage" method="post"
+                    action="<?php /* get_stylesheet_directory_uri( ) */?>/inc/assets/mail/contact_me.php">
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label>Name</label>
@@ -54,7 +55,7 @@
                     <div id="success"></div>
                     <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton"
                             type="submit">Send</button></div>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>

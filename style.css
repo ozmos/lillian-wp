@@ -10251,3 +10251,20 @@ form .row:first-child .floating-label-form-group {
 .copyright {
   background-color: #1a252f;
 }
+
+
+/* Form 7 styles */
+#wpcf7-f73-o1 > form p {
+  text-align: left;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+#wpcf7-f73-o1 > form label {
+  width: 100%;
+}
+#wpcf7-f73-o1 > form input[type=submit] {
+  padding: 1rem 1.75rem;
+  font-size: 1.25rem;
+
+}
