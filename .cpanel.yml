@@ -1,4 +1,0 @@
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/pcwebsit/lilliansmandarintutoring.com/wp-content/themes/lillian/
-    - /bin/cp -R * $DEPLOYPATH
