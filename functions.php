@@ -30,12 +30,7 @@ function enqueue_parent_styles() {
 ##                                                                                      ##
 ##========================================================================================
 
-// ReCaptcha
-add_action('wp_enqueue_scripts', 'add_recaptcha');
 
-function add_recaptcha() {
-	wp_enqueue_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js');
-}
 // font awesome
 add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
 

@@ -1,2 +1,0 @@
-<?php
-$secretKey = 'secret-key';
