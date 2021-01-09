@@ -10254,16 +10254,16 @@ form .row:first-child .floating-label-form-group {
 
 
 /* Form 7 styles */
-#wpcf7-f73-o1 > form p {
+#contact form p {
   text-align: left;
   font-size: 1.5rem;
   width: 100%;
 }
 
-#wpcf7-f73-o1 > form label {
+#contact form label {
   width: 100%;
 }
-#wpcf7-f73-o1 > form input[type=submit] {
+#contact form input[type=submit] {
   padding: 1rem 1.75rem;
   font-size: 1.25rem;
 
