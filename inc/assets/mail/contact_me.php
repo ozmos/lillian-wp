@@ -10,7 +10,10 @@ if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || 
 $recaptcha = $_POST['g-recaptcha-response'];
 $res = reCaptcha($recaptcha);
 if(!$res['success']){
-  http_response_code(500);
+  $errors = $res['error-codes'];
+  foreach ($errors as $key => $value) {
+    echo '<p>' . $value . '</p>';
+  }
 }
 
 function reCaptcha($recaptcha){
