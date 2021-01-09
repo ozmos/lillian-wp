@@ -17,7 +17,7 @@
    viewBox="0 0 900 650"
    sodipodi:docname="private-tuition.svg"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   inkscape:export-filename="/home/osamu/CODE/DEVILBOXES/projects/lillian-wp/public/wp-content/themes/lillian/inc/assets/img/services/private-classes.png"
+   inkscape:export-filename="/home/osamu/Desktop/DEVILBOX/projects/lillian-wp/public/wp-content/themes/lillian/inc/assets/img/services/private-tuition.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <metadata
@@ -48,12 +48,12 @@
      id="namedview4"
      showgrid="true"
      inkscape:zoom="0.90836025"
-     inkscape:cx="38.79536"
-     inkscape:cy="320.49132"
+     inkscape:cx="374.56523"
+     inkscape:cy="332.60105"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2">
+     inkscape:current-layer="layer1">
     <inkscape:grid
        type="xygrid"
        id="grid3717"
@@ -83,8 +83,10 @@
        id="path3719"
        cx="450"
        cy="325"
-       style="fill:#0548ff;fill-opacity:1;stroke:none;stroke-width:1.02395165;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       r="255.98802" />
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02395165;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       r="255.98802"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
   <g
      inkscape:groupmode="layer"

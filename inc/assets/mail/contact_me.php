@@ -6,6 +6,31 @@ if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || 
   exit();
 }
 
+// recaptcha
+$recaptcha = $_POST['g-recaptcha-response'];
+$res = reCaptcha($recaptcha);
+if(!$res['success']){
+  http_response_code(500);
+}
+
+function reCaptcha($recaptcha){
+  require_once 'keys.php';
+  $secret = $secretKey;
+  $ip = $_SERVER['REMOTE_ADDR'];
+
+  $postvars = array("secret"=>$secret, "response"=>$recaptcha, "remoteip"=>$ip);
+  $url = "https://www.google.com/recaptcha/api/siteverify";
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $postvars);
+  $data = curl_exec($ch);
+  curl_close($ch);
+
+  return json_decode($data, true);
+}
+
 // sanitize input
 $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);

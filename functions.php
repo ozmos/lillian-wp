@@ -4,11 +4,12 @@
 ##                                         TODO                                         ##
 ##                                                                                      ##
 ##========================================================================================
-// Add automatic git deployment https://medium.com/@ridbay/how-to-deploy-your-github-repositories-to-cpanel-the-easier-way-16ec6e6cc7ee
+// Add automatic git deployment https://medium.com/@ridbay/how-to-deploy-your-github-repositories-to-cpanel-the-easier-way-16ec6e6cc7ee DONE 1/1/2020
 // Remove dead code
 // Separate portfolio items from title and description
 // Add copyright to footer DONE 1/1/2020
 // Change location of pricing info DONE 1/1/2020
+// Spam prevention
 
 
 ##========================================================================================
@@ -29,11 +30,17 @@ function enqueue_parent_styles() {
 ##                                                                                      ##
 ##========================================================================================
 
+// ReCaptcha
+add_action('wp_enqueue_scripts', 'add_recaptcha');
+
+function add_recaptcha() {
+	wp_enqueue_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js');
+}
 // font awesome
 add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
 
 function tthq_add_custom_fa_css() {
-wp_enqueue_style( 'custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' );
+	wp_enqueue_style( 'custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' );
 }
 
 
