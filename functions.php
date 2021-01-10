@@ -4,12 +4,13 @@
 ##                                         TODO                                         ##
 ##                                                                                      ##
 ##========================================================================================
-// Remove dead code
+// Remove dead code DONE 10/1/21
 // Separate portfolio items from title and description DONE 9/1/21
 // Add copyright to footer DONE 1/1/2021
 // Change location of pricing info DONE 1/1/2021
 // Spam prevention DONE 9/1/21 
 // Move ACF fields to separate file DONE 9/1/21
+// Make main nav wordpress ready
 
 
 ##========================================================================================
