@@ -1,15 +1,21 @@
-<!-- Contact Section-->
+<?php while ( have_posts() ) : the_post(); ?>
+<section class="lillian-pt-6" id="content">
+<div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 mx-auto">
+                <div class="lead">
+                    <?php the_content(); ?>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+        <?php endwhile; // End of the loop. ?>
+
+        <!-- Contact Section Form-->
 <section class="page-section" id="contact">
     <div class="container">
-        <!-- Contact Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-        <!-- Icon Divider-->
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-            <div class="divider-custom-line"></div>
-        </div>
-        <!-- Contact Section Form-->
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
                 <?php 

@@ -42,41 +42,16 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a
                                 class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                                href="#portfolio">Services</a></li>
+                                href="<?php echo esc_url( home_url( '/' )); ?>#portfolio">Services</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a
-                                class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+                                class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo esc_url( home_url( '/' )); ?>#about">About</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a
-                                class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+                                class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo esc_url( home_url( '/' )); ?>/contact">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- MASTHEAD -->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <?php 
-                $avatar = get_field('avatar');
-                if( !empty( $avatar ) ): ?>
-                <img class="masthead-avatar mb-5 rounded-circle" src="<?php echo esc_url($avatar['url']); ?>"
-                    alt="<?php echo esc_attr($avatar['alt']); ?>" />
-                <?php endif; ?>
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0"><?php the_field('page_title'); ?></h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">
-                    <?php the_field('tag_line'); ?>
-                </p>
-            </div>
-
-        </header>
-        <!-- END MASTHEAD -->
+        
         <main>
