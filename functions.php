@@ -55,13 +55,15 @@ function theme_scripts() {
 
 require_once get_stylesheet_directory(  ) . '/inc/acf/load-fields.php';
 
-/*
- 
-    ____ _   _ ____ _____ ___  __  __   ____   _    ____ _____   _______   ______  _____ ____  
-   / ___| | | / ___|_   _/ _ \|  \/  | |  _ \ / \  / ___| ____| |_   _\ \ / /  _ \| ____/ ___| 
-  | |   | | | \___ \ | || | | | |\/| | | |_) / _ \| |  _|  _|     | |  \ V /| |_) |  _| \___ \ 
-  | |___| |_| |___) || || |_| | |  | | |  __/ ___ \ |_| | |___    | |   | | |  __/| |___ ___) |
-   \____|\___/|____/ |_| \___/|_|  |_| |_| /_/   \_\____|_____|   |_|   |_| |_|   |_____|____/ 
-                                                                                               
- 
-*/
+/* Remove recaptcha from pages not contact */
+// Disable contact-form-7 enqueue actions @link https://gist.github.com/pacotole/131fd069bb9d703c12ad5947baa6ffab
+remove_action( 'wp_enqueue_scripts', 'wpcf7_do_enqueue_scripts', 10 );
+remove_action( 'wp_enqueue_scripts', 'wpcf7_recaptcha_enqueue_scripts', 10 );
+
+// Trigger contact-form-7 enqueue actions when form shortcode is executed
+function contact_form_7_enqueue_scripts($out){
+	wpcf7_do_enqueue_scripts();
+ 	wpcf7_recaptcha_enqueue_scripts();
+	return $out;
+}
+add_filter( 'shortcode_atts_wpcf7', 'contact_form_7_enqueue_scripts' );
