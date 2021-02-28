@@ -56,15 +56,15 @@ function theme_scripts() {
 require_once get_stylesheet_directory(  ) . '/inc/acf/load-fields.php';
 
 /* Remove recaptcha from pages not contact */
-// Disable contact-form-7 enqueue actions @link https://gist.github.com/pacotole/131fd069bb9d703c12ad5947baa6ffab
-// Disable contact-form-7 enqueue actions
-remove_action( 'wp_enqueue_scripts', 'wpcf7_do_enqueue_scripts', 10 );
-remove_action( 'wp_enqueue_scripts', 'wpcf7_recaptcha_enqueue_scripts', 10 );
+// // Disable contact-form-7 enqueue actions @link https://gist.github.com/pacotole/131fd069bb9d703c12ad5947baa6ffab
+// // Disable contact-form-7 enqueue actions
+// remove_action( 'wp_enqueue_scripts', 'wpcf7_do_enqueue_scripts', 10 );
+// remove_action( 'wp_enqueue_scripts', 'wpcf7_recaptcha_enqueue_scripts', 10 );
 
-// Trigger contact-form-7 enqueue actions when form shortcode is executed
-function contact_form_7_enqueue_scripts($out){
-	wpcf7_do_enqueue_scripts();
- 	wpcf7_recaptcha_enqueue_scripts();
-	return $out;
-}
-add_filter( 'shortcode_atts_wpcf7', 'contact_form_7_enqueue_scripts' );
+// // Trigger contact-form-7 enqueue actions when form shortcode is executed
+// function contact_form_7_enqueue_scripts($out){
+// 	wpcf7_do_enqueue_scripts();
+//  	wpcf7_recaptcha_enqueue_scripts();
+// 	return $out;
+// }
+// add_filter( 'shortcode_atts_wpcf7', 'contact_form_7_enqueue_scripts' );
