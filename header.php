@@ -9,7 +9,6 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <?php wp_head();?>
-    <?php recaptchaCheck(); ?>
 </head>
 
 <body id="page-top">
